@@ -14,8 +14,7 @@ class Triangle
     sum_s2_s3 = @triangle_side[1] + @triangle_side[2]
     if (@triangle_side.none? {|side| side <= 0}
       return TRUE
-    else 
-      return FALSE
+    
     end
   end
     

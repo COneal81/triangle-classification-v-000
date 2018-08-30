@@ -22,7 +22,7 @@ class Triangle
   
   def kind
     if valid?
-      if sum_s1_s2.length.uniq == 1
+      if @triangle_side.length.uniq == 1
        :equilateral
       elsif sum_s2_s3.length.uniq == 2
         :isosceles

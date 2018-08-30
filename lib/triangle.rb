@@ -2,21 +2,24 @@ class Triangle
   attr_accessor :side_1, :side_2, :side_3
   
   def initialize(s1, s2, s3)
-    @triangle = []
-    @triangle << s1
-    @triangle << s2
-    @triangle << s3
+    @triangle_side = []
+    @triangle_side << s1
+    @triangle_side << s2
+    @triangle_side << s3
   end  
   
   def valid?
-    sum_s1_s2 = s1[0] + s2[1]
-    sum_s1_s3 = s1[0] + s3[2]
-    sum_s2_s3 = s2[1] + s3[2]
-    if 
+    sum_s1_s2 = @triangle_side[0] + @triangle_side[1]
+    sum_s1_s3 = @triangle_side[0] + @triangle_side[2]
+    sum_s2_s3 = @triangle_side[1] + @triangle_side[2]
+    if (@triangle_side.none? {|side| side <= 0}
+      return TRUE
+    else  
+      return FALSE
     
   
   def kind
-    if side_1 == side_2 && side_2 == side_3 && side_1 == side_3
+    if sum_s1_s2 => 1
       :equilateral
     elsif side_1 == side_2 || side_2 == side_3 || side_1 == side_3
       :isosceles

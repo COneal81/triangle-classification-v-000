@@ -16,14 +16,16 @@ class Triangle
       return TRUE
     else  
       return FALSE
+    end
+  end
     
   
   def kind
-    if sum_s1_s2 => 1
+    if sum_s1_s2.length.uniq == 1
       :equilateral
-    elsif side_1 == side_2 || side_2 == side_3 || side_1 == side_3
+    elsif sum_s2_s3.length.uniq == 2
       :isosceles
-    elsif  side_1 != side_2 && side_2 != side_3 && side_1 != side_3
+    else
       :scalene
     else 
     end

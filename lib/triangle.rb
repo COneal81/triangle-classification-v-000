@@ -20,14 +20,16 @@ class Triangle
     
   
   def kind
-    if sum_s1_s2.length.uniq == 1
-      :equilateral
-    elsif sum_s2_s3.length.uniq == 2
-      :isosceles
-    else
-      :scalene
+    if valid?
+      if sum_s1_s2.length.uniq == 1
+       :equilateral
+      elsif sum_s2_s3.length.uniq == 2
+        :isosceles
+      else
+       :scalene
     end
   end
+end
   
 
 end

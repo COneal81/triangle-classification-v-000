@@ -24,7 +24,7 @@ class Triangle
     if valid?
       if @triangle_side.uniq.length == 1
        :equilateral
-      elsif @triangle_side.length.uniq == 2
+      elsif @triangle_side.uniq.length == 2
         :isosceles
       else
        :scalene
